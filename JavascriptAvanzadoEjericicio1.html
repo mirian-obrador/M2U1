@@ -1,0 +1,41 @@
+<!--Ejercicio 1: Crear un documento html con 3 cuadrados que, al ser clickeados,
+cambien el color de fondo del documento. Cada cuadrado deberá tener un color
+distinto.!-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="JavascriptAvanzadoEjericicio1.css">
+  </head>
+  <body id="body">
+  
+    <p>
+      <button class="boton" id="naranja">Naranja</button>
+      <button class="boton" id="verde">Verde</button>
+      <button class="boton" id="violeta">Violeta</button>
+    </p>
+    <script>
+     
+         var naranja = document.getElementById("naranja");
+          var verde = document.getElementById("verde"); 
+          var violeta = document.getElementById("violeta"); 
+
+          
+
+          naranja.addEventListener("click", function () {
+          body.style.backgroundColor="#ffa500"
+          });
+      
+          verde.addEventListener("click", function () {
+          body.style.backgroundColor= "#008000"
+          });
+          violeta.addEventListener("click", function () {
+          body.style.backgroundColor= "#8a2be2"
+          });
+    </script>
+    
+</html>

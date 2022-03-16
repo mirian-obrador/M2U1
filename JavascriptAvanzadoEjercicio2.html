@@ -1,0 +1,40 @@
+<!--Ejercicio 2: 
+    Programar un contador de caracteres para un textarea.!-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="JavascriptAvanzadoEjercicio2.css">
+  </head>
+  <body>
+      
+    <h2>Escribe tu comentario</h1>
+ 
+    <script>
+        function contarCaracteres(){
+
+            var total=120;
+
+            var valor= document.getElementById("contador");
+            var respuesta=document.getElementById("res");
+            var cantidad=valor.value.length;
+        document.getElementById('res').innerHTML = cantidad + ' caractere/s, te quedan ' + (total - cantidad) ;
+		if(cantidad>total){
+			respuesta.style.color = "red";
+		}
+		else {
+			respuesta.style.color = "black";
+		}
+		};
+         
+
+    </script>
+       <textarea name="contador" id="contador" onpaste="contarCaracteres();" onkeyup="contarCaracteres();" cols="30" rows="10"></textarea>
+    
+    <div id="res">0 caractere/s</div>
+  </body>
+</html>
